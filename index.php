@@ -34,7 +34,6 @@ require_once 'includes/sesh_chek.inc.php';
         <button class="header_button">Admin</button>
     </a>
 
-
     <a href="logout.php">
         <button class="header_button">Logout</button>
     </a>
@@ -70,7 +69,7 @@ if (!$conn) {
 
 <?php
 // SQL-request to get the movie info
-$sql = "SELECT movie_id, title, stars, imgs FROM movie ORDER BY stars DESC;";
+$sql = "SELECT movie_id, title, stars, imgs, user_star FROM movie ORDER BY stars DESC;";
 
 
 
@@ -94,10 +93,10 @@ $result = $conn->query($sql);
         <div class="movie-box"> <?php //simple exicution of the movie-box ?>
             <h3 id="title"><?php echo $row["title"]; ?></h3>
             <img class="img" src="<?php echo $row["imgs"]; ?>" alt="Movie Poster">
-            <h4><?php echo $row["stars"]; ?> <img class="star_img" alt="star"
-                                                  src="https://pngimg.com/d/star_PNG41507.png"></h4>
+            <h4><?php echo $row["stars"]; ?> <img class="star_img" alt="star" src="img/starimg.png"></h4>
+            <h4> <?php echo $row["user_star"]; ?> <img src="img/starimg.png" class="star_img" alt="stars from users"></h4>
         </div>
-    <?php endwhile; ?>
+          <?php endwhile; ?>
 <?php else : ?> // if no movie exists
     <p>no movies to show</p>
 <?php endif; ?>
@@ -107,6 +106,7 @@ $
 <?php
 //close the database connection
 $conn->close();
+
 ?>
 
 </body>

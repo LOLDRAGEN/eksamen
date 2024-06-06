@@ -23,6 +23,7 @@ require_once 'includes/sesh_chek.inc.php';
     <input type="text" name="title" placeholder="Title">
     <input type="text" name="imgs" placeholder="Image link">
     <input type="number" step="0.1" min="0.1" max="10.0" name="stars" placeholder="Rating">
+    <input type="number" step="0.1" min="0.1" max="10.0" name="user_star" placeholder="user rating">
     <button type="submit">Upload</button>
 </form>
 </body>

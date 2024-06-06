@@ -1,3 +1,4 @@
+
 # pc
 - SJEKKE status server og database
   - sudo systemctl status mariadb
@@ -8,12 +9,14 @@
   - hyper -> Virtuell svitsj-behandling -> prooveeksamen switch -> vise oppset
 
 
-## - mariadb users og priviliges
-- SELECT * User FROM mysql.user;
+##  mariadb users og priviliges
+```sql
+SELECT * User FROM mysql.user
+```
 - show databases; -> use prooveeskamen; -> display tables; -> select usernames,admin from users;
 
   
-- lage database
+- 
   - CREATE DATABASE db1;
 
 
@@ -64,6 +67,13 @@ echo ("hei $navn");
 echo("$liste[2]")
 ```
 
+#  Netverk
+- ipv4 er 32 bit 
+- ipv6 er 128 bit
+- cat5 er 1 gbps
+- cat6 er 10 gbps
+- 
+
 # github
 - git push origin main
 - git pull
@@ -71,7 +81,7 @@ echo("$liste[2]")
 - git commit -m "message"
 - test
 ## inner join
-```
+``` sql
 select select_list
 from t1
 inner join t2 on t1.column1 = t2.column1;
